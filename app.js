@@ -27,7 +27,12 @@ function verificarIntento() {
     }
     return;
 }
-
+    //creo un addeventlistener al input para que me verifique el intento si apreto el enter tambien
+let numeroDeUsuario = document.getElementById('valorUsuario').addEventListener('keypress', function (e) {
+    //e -> es el evento. Y si la tecla del evento keypress es enter, verifica el intento
+    if (e.key === 'Enter') {
+      verificarIntento()
+    }})
 function limpiarCaja() {
     document.querySelector('#valorUsuario').value = '';
 }
