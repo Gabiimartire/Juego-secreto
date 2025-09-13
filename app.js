@@ -3,14 +3,11 @@ let intentos = 0;
 let listaNumerosSorteados = [];
 let numeroMaximo = 10;
 
-
-
 function asignarTextoElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
     elementoHTML.innerHTML = texto;
     return;
 }
-
 function verificarIntento() {
     let numeroDeUsuario = parseInt(document.getElementById('valorUsuario').value);
     
@@ -60,7 +57,6 @@ function condicionesIniciales() {
     intentos = 1;
     console.log(numeroSecreto);
 }
-
 function reiniciarJuego() {
     //limpiar caja
     limpiarCaja();
@@ -69,8 +65,6 @@ function reiniciarJuego() {
     //Inicializar el número intentos
     condicionesIniciales();
     //Deshabilitar el botón de nuevo juego
-    document.querySelector('#reiniciar').setAttribute('disabled','true');
-    
+    document.querySelector('#reiniciar').setAttribute('disabled','true');   
 }
-
 condicionesIniciales();
